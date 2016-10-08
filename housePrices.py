@@ -17,11 +17,15 @@ data=pd.read_csv("Data/train.csv")
 # sklearn's label_encoder seems better
 # - just working out how to apply this 
 # to a pandas dataframe rather than a numpy
-# array.
-#data=pd.get_dummies(data,dummy_na=False)
-preprop=preprocessing.LabelEncoder()
-data.apply(preprocessing.LabelEncoder().fit_transform)
-print data
+# array. LabelEncoder could confuse ML algo though.
+
+#apply get dummies to rm categorical data
+data=pd.get_dummies(data)
+
+print data.SalePrice
+
+
+#print data
 ##!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ## DATA CLEANED AND SUMMARY STATS PLOTTED
 ## APPLY ML ALGO
