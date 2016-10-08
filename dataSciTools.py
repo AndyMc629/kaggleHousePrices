@@ -28,4 +28,5 @@ def train_and_evaluate(clf, X_train, y_train):
     plt.savefig("Coeffs.pdf")
     plt.close()
 
-
+#def dfCatToNum(df):
+#        cat_cols=df.select_dtypes
